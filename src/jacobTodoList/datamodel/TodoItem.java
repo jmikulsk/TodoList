@@ -3,6 +3,7 @@ package jacobTodoList.datamodel;
 import java.time.LocalDate;
 
 public class TodoItem {
+
     private String shortDescription;
     private String details;
     private LocalDate deadline;

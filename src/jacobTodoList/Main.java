@@ -19,30 +19,28 @@ public class Main extends Application {
         primaryStage.show();
     }
 
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     @Override
-    public void stop() throws Exception{
-        try{
+    public void stop() throws Exception {
+        try {
             TodoData.getInstance().storeTodoItems();
-        }
-        catch(IOException e){
+
+        } catch(IOException e) {
             System.out.println(e.getMessage());
         }
     }
 
     @Override
     public void init() throws Exception {
-        try{
+        try {
             TodoData.getInstance().loadTodoItems();
-        }
-        catch(IOException e){
+
+        } catch(IOException e) {
             System.out.println(e.getMessage());
         }
     }
-
-
-    public static void main(String[] args) {
-        launch(args);
-    }
-
-
 }
